@@ -20,7 +20,7 @@ const MovieList = () => {
 
     return(
 
-        <div className="flex p-5 gap-4 gap-y-20 flex-wrap overflow-y-scroll">
+        <div className="flex p-5 gap-4 gap-y-20 flex-wrap">
             {movies.map((movie, i) => {
                 return (
                     <MovieCard
