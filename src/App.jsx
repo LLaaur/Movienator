@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
-import Header from './components/header'
+import Header from './components/Header'
+import SideBar from './components/SideBar'
 
-function App() {
+const App = () => {
     return(
-        <Header/>
+        <div className='flex flex-col w-full h-screen overflow-hidden'>
+            <Header/>
+            <SideBar/>
+        </div>
     )
 }
 
