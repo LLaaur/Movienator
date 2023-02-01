@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 
+import {motion} from 'framer-motion'
+import { BiArrowToTop } from "react-icons/bi";
 
 const PopularMovieStrip = () => {
     const [movies, setMovies] = useState([]);
+    const nullRef = useRef(null);
 
     useEffect(() => {
         // fetching
@@ -20,17 +23,18 @@ const PopularMovieStrip = () => {
 
     return(
 
-        <div className="flex gap-4">
-            {movies.map((movie, i) => {
-                return (
-                    <MovieCard
-                        key={i}
-                        {...movie}
-                    />
-                )
-            })}
 
-        </div>
+            <div className="flex gap-4">
+                {movies.map((movie, i) => {
+                    return (
+                        <MovieCard
+                            key={i}
+                            {...movie}
+                        />
+                    )
+                })}
+
+            </div>
 
 
     )

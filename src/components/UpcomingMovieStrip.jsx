@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
+import {motion} from 'framer-motion';
 
 
 const UpcomingMovies = () => {
 
     const [movies, setMovies] = useState([]);
+    const constraintsRef = useRef(null);
 
     useEffect(() => {
 
@@ -21,16 +23,16 @@ const UpcomingMovies = () => {
 
     return (
 
-        <div className="flex gap-4">
-            {movies.map((movie, i) => {
-                return (
-                    <MovieCard
-                        key={i}
-                        {...movie}
-                    />
-                )
-            })}
-        </div>
+            <div className="flex gap-4">
+                {movies.map((movie, i) => {
+                    return (
+                        <MovieCard
+                            key={i}
+                            {...movie}
+                        />
+                    )
+                })}
+            </div>
 
     )
 
