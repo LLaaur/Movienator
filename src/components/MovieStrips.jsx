@@ -10,7 +10,7 @@ const MovieStrips = () => {
 
     return (
 
-        <div className="flex flex-col gap-y-20 p-5">
+        <div className="flex flex-col gap-y-[5rem] pl-4 pt-4">
             <div className="flex bg-neutral-800 rounded-lg mb-[-4rem] p-1 items-center gap-x-2">
                 <BiTrendingUp fill="red" size={30}/>
                 <h1 className="font-bold text-lg text-white">Popular</h1>
