@@ -4,6 +4,7 @@ import Header from './components/Header';
 import SideBar from './components/SideBar';
 import PopularMovieStrip from './components/PopularMovieStrip';
 import TopRated from './components/TopRatedMovieStrip';
+import UpcomingMovies from './components/UpcomingMovieStrip';
 
 const App = () => {
     
@@ -14,6 +15,7 @@ const App = () => {
                 <SideBar/>
                 <PopularMovieStrip/>
                 <TopRated/>
+                <UpcomingMovies/>
             </div>
         </div>
     )
