@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import axios from "axios";
 
 
-const PopularMovieList = () => {
+const PopularMovieStrip = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const PopularMovieList = () => {
 
     return(
 
-        <div className="flex p-5 gap-4 gap-y-20 flex-wrap">
+        <div className="flex gap-4">
             {movies.map((movie, i) => {
                 return (
                     <MovieCard
@@ -36,4 +36,4 @@ const PopularMovieList = () => {
     )
 }
 
-export default PopularMovieList
+export default PopularMovieStrip

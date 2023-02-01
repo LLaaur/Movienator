@@ -5,17 +5,16 @@ import SideBar from './components/SideBar';
 import PopularMovieStrip from './components/PopularMovieStrip';
 import TopRated from './components/TopRatedMovieStrip';
 import UpcomingMovies from './components/UpcomingMovieStrip';
+import MovieStrips from './components/MovieStrips';
 
 const App = () => {
     
     return(
-        <div className='flex flex-col w-full h-screen'>
+        <div className='flex flex-col w-full'>
             <Header/>
-            <div className="flex bg-neutral-800 overflow-y-scroll">
-                <SideBar/>
-                <PopularMovieStrip/>
-                <TopRated/>
-                <UpcomingMovies/>
+            <div className="flex bg-[#373737]">
+                <SideBar/>       
+                <MovieStrips/>
             </div>
         </div>
     )

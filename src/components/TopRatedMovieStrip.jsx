@@ -21,7 +21,7 @@ const TopRated = () => {
 
     return (
 
-        <div className="flex p-5 gap-4 gap-y-20 flex-wrap">
+        <div className="flex gap-4">
             {movies.map((movie, i) => {
                 return (
                     <MovieCard
