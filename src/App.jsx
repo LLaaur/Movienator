@@ -13,11 +13,11 @@ const App = () => {
     return(
         <div className='flex flex-col'>
             <Header/>
-            <div className="flex bg-[#373737] h-fit">
+            <div className="flex bg-[#373737] overflow-hidden h-fit">
                 <SideBar className='z-50'/>       
                 <MovieStrips/>
             </div>
-            <Footer/>
+            <Footer className='mt-[5rem]'/>
         </div>
     )
 }

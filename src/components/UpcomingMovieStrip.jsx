@@ -20,7 +20,7 @@ const UpcomingMovies = () => {
     })
 
     return (
-            <div className="flex gap-4">
+            <div className="flex gap-4 pb-24">
                 {movies.map((movie, i) => {
                     return (
                         <MovieCard

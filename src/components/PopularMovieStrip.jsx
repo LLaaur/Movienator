@@ -19,6 +19,7 @@ const PopularMovieStrip = () => {
     }, []);
 
     return(
+
             <div className="flex gap-4">
                 {movies.map((movie, i) => {
                     return (
