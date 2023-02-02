@@ -19,7 +19,7 @@ const SideBar = () => {
 
     return (
         <>
-            <ul className="w-[200px] bg-neutral-800 h-screen p-4 drop-shadow-lg">
+            <ul className="w-[200px] bg-neutral-800 p-4 drop-shadow-lg z-50">
                     {genreList}
             </ul>
         </>

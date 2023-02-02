@@ -14,7 +14,7 @@ const App = () => {
         <div className='flex flex-col'>
             <Header/>
             <div className="flex bg-[#373737] h-fit">
-                <SideBar/>       
+                <SideBar className='z-50'/>       
                 <MovieStrips/>
             </div>
             <Footer/>
