@@ -1,31 +1,93 @@
-import { motion} from "framer-motion";
-import React from "react";
-import { genres } from "../assets/constants";
+import { useState, useEffect } from "react"
+import SideTile from "./SideTile"
 
 const SideBar = () => {
 
-    const genreList = genres.map((genre) => (
-        <motion.div 
-        initial='empty'
-        animate='fadeIn'
-        whileTap={{scale:0.92}}
-        whileHover={{scale: 1.05}}>
-            <li className="cursor-pointer text-neutral-200 font-normal p-2 hover:bg-[#103281] rounded-lg" 
-            key={genre.name}>
-                {genre.name}
-            </li>
-        </motion.div>
-    ))
+    const [genres, setGenres] = useState();
 
-    return (
-        <>
-            <ul className="w-[200px] bg-neutral-800 p-4 drop-shadow-lg z-50">
-                    {genreList}
+    useEffect(() => {
+        setGenres(prevState => {
+            return genresData.genres.map((genre) => {
+                return <SideTile
+                        key={genre.id}
+                        genre={genre}/>
+            })
+        })
+    }, [])
+
+    return(
+        <div className="bg-neutral-800 text-neutral-100 p-2 pr-0 h-auto drop-shadow-lg">
+            <ul className="cursor-pointer text-[0.99rem] space-y-2 w-[140px]">
+                {genres}
             </ul>
-        </>
+        </div>
     )
 
 }
 
+
+export const genresData = {
+    'genres':[
+    { 
+        'name': 'Action',
+        'id': '28'
+    },
+    {   'name': 'Animation', 
+        'id': '16' 
+    },
+    { 
+        'name': 'Adventure', 
+        'id': '12' 
+    },
+    { 
+        'name': 'Comedy', 
+        'id': '35' 
+    },
+    {
+        "id": 80,
+        "name": "Crime"
+    },
+    {
+        "id": 99,
+        "name": "Documentary"
+    },
+    {
+        "id": 18,
+        "name": "Drama"
+    },
+    {
+        "id": 10751,
+        "name": "Family"
+    },
+    {
+        "id": 14,
+        "name": "Fantasy"
+    },
+    {
+        "id": 36,
+        "name": "History"
+    },
+    {
+        "id": 27,
+        "name": "Horror"
+    },
+    {
+        "id": 10402,
+        "name": "Music"
+    },
+    {
+        "id": 9648,
+        "name": "Mystery"
+    },
+    {
+        "id": 10749,
+        "name": "Romance"
+    },
+    {
+        "id": 878,
+        "name": "Science Fiction"
+    },
+]
+}
 
 export default SideBar
