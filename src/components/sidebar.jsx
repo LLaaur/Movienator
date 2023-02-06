@@ -16,7 +16,7 @@ const SideBar = () => {
     }, [])
 
     return(
-        <div className="bg-neutral-800 text-neutral-100 p-2 pr-0 h-auto drop-shadow-lg">
+        <div className="bg-neutral-800 text-neutral-100 p-2 pr-0 h-auto drop-shadow-lg z-10">
             <ul className="cursor-pointer text-[0.99rem] space-y-2 w-[140px]">
                 {genres}
             </ul>

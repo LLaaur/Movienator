@@ -1,22 +1,26 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
+import { selectSelectedGenres } from "../redux/reducers/selectedGenresSlice";
+import { useSelector } from "react-redux";
 
 
 const PopularMovieStrip = () => {
     const [movies, setMovies] = useState([]);
 
+    const selectedGenres = useSelector(selectSelectedGenres)
+
     useEffect(() => {
         // fetching
 
-        axios.get('https://api.themoviedb.org/3/discover/movie?api_key=a34f06ec9cf86ce289f987ca6afeeaee&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate')
+        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=a34f06ec9cf86ce289f987ca6afeeaee&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&with_genres=${selectedGenres.toString()}`)
         .then((response) => {
             setMovies(response.data.results)
         })
         .catch((error) => {
             console.log(error)
         })
-    }, []);
+    }, [selectedGenres]);
 
     return(
 
