@@ -3,6 +3,7 @@ import axios from "axios";
 import MovieCard from "../components/MovieCard";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import apiKey from "../assets/API";
 
 const SearchResults = () => {
 
@@ -11,7 +12,7 @@ const SearchResults = () => {
     const {searchTerm} = useParams()
 
     useEffect(() => {
-        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=a34f06ec9cf86ce289f987ca6afeeaee&query=${searchTerm}&language=en-US&page=1&include_adult=false`)
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey()}&query=${searchTerm}&language=en-US&page=1&include_adult=false`)
         .then((response) => {
             setMovies(response.data.results.slice(0, 5))
         })

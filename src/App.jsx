@@ -8,12 +8,9 @@ import Discover from './pages/Discover';
 
 const App = () => {
 
-
-
     return(
         <div className='flex flex-col'>
-            <Header
-            onsubmit={() => console.log()}/>
+            <Header/>
             <div className="flex bg-[#373737] overflow-hidden h-fit">
                 <SideBar className='z-50'/>   
                 <div className="flex flex-col">
