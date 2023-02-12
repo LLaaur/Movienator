@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import SideTile from "./SideTile"
 
+
 const SideBar = () => {
 
     const [genres, setGenres] = useState();
@@ -21,6 +22,7 @@ const SideBar = () => {
                 {genres}
             </ul>
         </div>
+        
     )
 
 }
