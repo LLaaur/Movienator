@@ -21,8 +21,8 @@ const MovieDetails = () => {
             .then(
                 (response) => {
                     setMovieData(response.data);
-                    const trailerId = response.data.video.results.find(
-                        video => video.name === 'Oficial trailer'
+                    const trailerId = response.data.videos.results.find(
+                        (video) => video.name === 'Oficial trailer'
                     );
                     setTrailer(trailerId ? trailerId : response.data.videos.results[0]);
                 }
@@ -42,17 +42,13 @@ const MovieDetails = () => {
                 <>
                     <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fiex inset-0 z-50 outline-none focus:outline-none">
                         <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                            {}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-transparent outline-none focus:outline-none">
-                                {}
                                 <div className="flex items-start justify-between border-b p-2">
-                                    <button className="p-1 bg-transparent border-0 text-white opacity-100 float-right text-xl font-bold outline-none"
+                                    <button className="p-1 bg-transparent border-0 text-white opacity-100 float-right text-xl font-bold outline-none w-full"
                                             onClick={() => setShowModal(false)}>
-                                                <span className="bg-transparent text-white opacity-100 h-6 w-6 text-2xl block outline-none">X</span>
+                                                <span className="bg-transparent text-white opacity-100 h-6 w-6 text-2xl block outline-none float-right">X</span>
                                     </button>
                                 </div>
-                                {}
-                                <>
                                     <Youtube
                                         videoId={trailer.key}
                                         className="w-[50vw] h-[50vh]"
@@ -61,8 +57,6 @@ const MovieDetails = () => {
                                             height: "100%",
                                         }}
                                     />
-                                </>
-                                {}
                             </div>
                         </div>
                     </div>
@@ -116,10 +110,20 @@ const MovieDetails = () => {
                             )}
                         </div>
                     </div>
+
+                    <p className="text-white mb-8">{movieData.overview}</p>
+                    <div className="flex flex-row items-center">
+                        <button onClick={() => setShowModal(true)}
+                            className="border text-[#FFFDE3] border-white p-4 flex flex-row items-center hover:bg-cyan-600 hover-border-cyan-300 rounded-md">
+                            <IoMdPlay className="mr-3" />
+                            Watch Trailer
+                        </button>
+                    </div>
+
                 </div>
 
 
-                <p className="text-white mb-8">{movieData.overview}</p>
+
             </div>
 
         </div>
