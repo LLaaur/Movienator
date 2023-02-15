@@ -29,8 +29,8 @@ const SearchResults = () => {
 
             <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10 ml-4"> Showing results for <span className="font-white" >{searchTerm}</span> </h2>
 
-            <motion.div drag='x' dragElastic={0.7} dragConstraints={{right:0, left:-600}}>
-                <div className="flex gap-4 ml-4 h-[100vh]">
+            <motion.div>
+                <div className="flex gap-x-4 gap-y-20 ml-4 h-auto flex-wrap">
                         {movies.map((movie, i) => {
                             return (
                                 <MovieCard
