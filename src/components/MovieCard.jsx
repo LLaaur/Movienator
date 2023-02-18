@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import { AiFillStar } from "react-icons/ai"
 import { useNavigate } from "react-router-dom";
-import MovieDetails from "../pages/MovieDetails";
 
 const getPosterUrl = (posterPath) => { return `https://www.themoviedb.org/t/p/w220_and_h330_face/${posterPath}`}
 

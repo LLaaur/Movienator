@@ -21,7 +21,7 @@ const MovieDetails = () => {
                 (response) => {
                     setMovieData(response.data);
                     const trailerId = response.data.videos.results.find(
-                        (video) => video.name === 'Oficial trailer'
+                        (video) => video.name === 'Official Trailer'
                     );
                     setTrailer(trailerId ? trailerId : response.data.videos.results[0]);
                 }
@@ -40,7 +40,7 @@ const MovieDetails = () => {
                     alt="movie_cover"
                     className="w-full h-[70vh] object-cover"
                 />
-            <div className="flex justify-center pt-36 flex-wrap">
+            <div className="flex justify-center pt-36 flex-wrap w-[100vw]">
                 <div className="flex flex-col items-center">
                     <div className="h-auto w-[70%]">
                         <img src={`https://image.tmdb.org/t/p/w500${movieData.poster_path}`} 
