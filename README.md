@@ -16,4 +16,4 @@ IV. How to filter a list of objects based on a specific object property
 ![nasul](https://user-images.githubusercontent.com/102544514/220365956-4c56d6f8-9e8f-4109-b954-a928760d9cf8.png)
 
 
-👉 <a link href = 'movienatorr.netlify.app' /> Live Demo </a>
+👉 <a link href = 'https://movienatorr.netlify.app/' /> Live Demo </a>
